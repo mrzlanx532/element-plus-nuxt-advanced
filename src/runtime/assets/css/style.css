@@ -1,0 +1,72 @@
+@import 'variables.css';
+@import 'fonts.css';
+@import 'sidebar.css';
+@import 'browser.css';
+@import 'login.css';
+@import 'tabs.css';
+@import 'sections.css';
+@import 'form.css';
+@import 'rich-editor.css';
+@import 'modal.css';
+@import 'overlayscrollbars/styles/overlayscrollbars.css';
+
+* {
+  line-height: 1;
+  text-rendering: geometricPrecision;
+  font-family: FiraSansExtraCondensed, sans-serif;
+  box-sizing: border-box;
+}
+
+.os-theme-default {
+  --os-track-border-radius: 10px;
+  --os-handle-interactive-area-offset: 4px;
+  --os-handle-border-radius: 10px;
+  --os-handle-bg: var(--custom-scroll-gradient);
+  --os-handle-bg-hover: var(--custom-scroll-gradient);
+  --os-handle-bg-active: var(--custom-scroll-gradient);
+  --os-handle-min-size: 40px;
+  --os-padding-axis: 0;
+  --os-padding-perpendicular: 0;
+}
+
+.os-theme-main-scroll {
+  transition: width 0.3s;
+  --os-track-border-radius: 10px;
+  --os-handle-interactive-area-offset: 4px;
+  --os-handle-border-radius: 10px;
+  --os-handle-bg: var(--custom-scroll-gradient);
+  --os-handle-bg-hover: var(--custom-scroll-gradient);
+  --os-handle-bg-active: var(--custom-scroll-gradient);
+  --os-handle-min-size: 100px;
+  --os-padding-axis: 0;
+  --os-padding-perpendicular: 0;
+  --os-size: 4px;
+}
+
+.os-theme-main-scroll.os-scrollbar:hover {
+  --os-size: 8px;
+}
+
+html, body, #__nuxt {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.main.el-container {
+  padding: 20px 30px 20px calc(var(--sidebar-width) + 30px);
+  background: linear-gradient(to top right, #f8e9e9, #c3f2fd);
+  min-height: 100vh;
+}
+
+.main.el-container > .el-main {
+  padding: 0;
+  overflow: visible;
+  width: 100%;
+}
+
+.main.el-container .el-image__inner {
+  border-radius: 5px;
+}

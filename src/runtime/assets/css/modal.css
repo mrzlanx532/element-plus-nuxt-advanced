@@ -1,0 +1,50 @@
+.modal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.modal .modal__overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .vfm__content {
+  width: 100%;
+  height: 100%;
+}
+.modal .modal__container {
+  width: var(--modal-width, 570px);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.modal .modal__container.--loading {
+  opacity: 0;
+}
+.modal .modal__content {
+  background-color: var(--main-background-color);
+  border-radius: 24px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  width: var(--modal-width, 570px);
+}
+.modal.--fixed-top .modal__overlay {
+  align-items: start;
+}
+.modal.--small .modal__container {
+  width: var(--modal-width, 420px);
+}
+.modal-custom-scroll {
+  border-radius: var(--main-border-radius);
+  max-height: 90vh;
+  overflow: hidden;
+  width: 100%;
+}
+.modal-custom-scroll .os-scrollbar-vertical {
+  --os-padding-perpendicular: 0;
+  --os-size: 6px;
+  --os-handle-bg: var(--el-scrollbar-bg-color, var(--el-text-color-secondary));
+}

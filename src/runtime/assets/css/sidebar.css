@@ -1,0 +1,111 @@
+.sidebar .el-menu-item {
+  user-select: none;
+}
+.sidebar .el-menu-item.is-active {
+  color: var(--main-gradient-start);
+}
+.sidebar__overlay {
+  width: var(--sidebar-width);
+  position: absolute;
+  height: 100vh;
+  z-index: 1;
+  background-color: white;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar__overlay.--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar.--initialized {
+  opacity: 0;
+}
+.sidebar.el-aside {
+  height: 100vh;
+  position: fixed;
+  width: var(--sidebar-width);
+  overflow: hidden;
+  box-shadow: var(--main-box-shadow);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.sidebar__logo {
+  padding: 30px 10px 30px 30px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.sidebar__logo img {
+  width: 30px;
+  height: 30px;
+}
+.sidebar__logo div {
+  display: flex;
+  place-items: center center;
+  padding-left: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.sidebar__footer {
+  font-size: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sidebar__footer a {
+  user-select: none;
+  cursor: pointer;
+}
+.sidebar__footer img {
+  border-radius: 50%;
+  height: 35px;
+  opacity: 0.8;
+  width: 35px;
+}
+.sidebar__footer .username {
+  text-transform: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.sidebar__footer .role {
+  color: grey;
+  font-size: 12px;
+  padding-bottom: 30px;
+  text-transform: none;
+}
+.sidebar__menu {
+  --el-menu-level-padding: 10px;
+}
+.sidebar__menu .os-scrollbar {
+  right: auto;
+  left: 0;
+  --os-padding-axis: 0;
+  --os-padding-perpendicular: 0;
+  --os-size: 2px;
+  --os-handle-bg: var(--custom-scroll-gradient);
+  --os-handle-bg-hover: var(--custom-scroll-gradient);
+  --os-handle-min-size: 40px;
+}
+.sidebar__menu .el-sub-menu__title * {
+  user-select: none;
+}
+.sidebar__menu.el-menu {
+  border-right: none;
+  --el-menu-item-height: 36px;
+  --el-menu-sub-item-height: 36px;
+}
+.sidebar__menu .el-sub-menu.is-active .el-sub-menu__title {
+  border-bottom: 1px solid #e7e7e7;
+}
+.sidebar__menu .el-sub-menu__title, .sidebar__menu .el-menu-item {
+  border-bottom: 1px solid #e7e7e7;
+}
+.sidebar__sub-menu .el-menu {
+  background: #f7f7f7;
+}

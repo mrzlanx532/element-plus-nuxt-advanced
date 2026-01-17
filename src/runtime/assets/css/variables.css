@@ -1,0 +1,17 @@
+:root {
+  --sidebar-width: 220px;
+  --main-box-shadow: rgba(99, 99, 99, .2) 0 2px 8px 0;
+  --main-gradient-start: #de4020;
+  --main-gradient-intermediate: #ef7310;
+  --main-gradient-end: #ffa500ff;
+  --custom-scroll-gradient: linear-gradient(to bottom, var(--main-gradient-start) 0%, var(--main-gradient-end) 100%);
+  --main-background-color: #fff;
+  --main-border-radius: 7px;
+  --page-container-background-color: linear-gradient(to top right, #f8e9e9, #c3f2fd);
+
+  --color-4: #757575;
+  --color-3: #f3f3f3;
+  --color-2: #dbdbdb;
+
+  --browser-detail-header-background-color: #fdf9f6;
+}

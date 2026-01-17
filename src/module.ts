@@ -1,5 +1,5 @@
-import { addPluginTemplate, addTemplate, defineNuxtModule } from '@nuxt/kit'
-import { defaults, libraryName } from './config'
+import { addPluginTemplate, addTemplate, defineNuxtModule, createResolver, addImportsDir, addPlugin } from '@nuxt/kit'
+import { defaults } from './config'
 import {
   resolveCache,
   resolveComponents,
@@ -23,8 +23,8 @@ export type { ModuleOptions } from './types'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: libraryName,
-    configKey: 'elementPlus',
+    name: 'backoffice-ui',
+    configKey: 'backofficeUI',
     compatibility: {
       nuxt: '>=3'
     }
@@ -98,5 +98,25 @@ export default defineNuxtModule<ModuleOptions>({
         }
       })
     })
+
+    /** Advanced */
+    const { resolve } = createResolver(import.meta.url)
+
+    nuxt.options.alias['#backoffice-ui'] = resolve('./runtime')
+    nuxt.options.css.push(resolve('./runtime/assets/css/style.css'))
+
+    addImportsDir(resolve('./runtime/composables'))
+    addPlugin(resolve('./runtime/plugin'))
+  },
+  moduleDependencies: {
+    'nuxt-tiptap-editor': {
+      version: '3.2.0'
+    },
+    '@vue-final-modal/nuxt': {
+      version: '1.0.3'
+    },
+    '@mrzlanx532/nuxt-3-laravel-auth-module': {
+      version: '0.0.31'
+    }
   }
 })
